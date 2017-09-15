@@ -25,12 +25,12 @@ def _generate_checksum(nine_figures, valid=True):
 	if valid:
 		return checksum
 	else:
-		# generate a random checksum candidate, excluding 9
-		invalid_checksum = random.randrange(0,9)
+		invalid_checksum = random.randrange(0,10)
 		# if we happened to randomly choose the correct checksum, add one to make it invalid again
 		if invalid_checksum == checksum:
 			invalid_checksum += 1
-		return invalid_checksum
+		# return modulo 10, in case we got 9 and 9 was correct checksum we don't want to return 10
+		return invalid_checksum % 10
 
 def convert_age_to_date(age):
 	latest_possible_birthdate = datetime.datetime.today() - relativedelta.relativedelta(years=age)
