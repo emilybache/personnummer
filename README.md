@@ -1,7 +1,7 @@
 Personnummer
 ============
 
-This is a python module for generating random valid and invalid Swedish personal numbers.
+This is a Python 3 module for generating random valid and invalid (Swedish personal numbers)[https://en.wikipedia.org/wiki/Personal_identity_number_(Sweden)] for testing purposes.
 
 To use it you will need to install the following python modules:
 
@@ -9,6 +9,7 @@ To use it you will need to install the following python modules:
 	- python-dateutil
 
 For example using pip:
+
 	$> pip install luhn python-dateutil
 
 Usage
@@ -30,7 +31,7 @@ Sample usage:
 Self-tests
 ----------
 
-To run the self-tests, use py.test:
+To run the self-tests, use (py.test)[https://docs.pytest.org]:
 
 	$> py.test
 
